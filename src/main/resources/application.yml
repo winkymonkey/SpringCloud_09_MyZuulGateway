@@ -1,0 +1,13 @@
+server:
+  port: 8999
+zuul:
+  routes:
+    department:
+      path: /department/**
+      service-id: department-service
+    employee:
+      path: /employee/**
+      service-id: employee-service
+    organization:
+      path: /organization/**
+      service-id: organization-service
