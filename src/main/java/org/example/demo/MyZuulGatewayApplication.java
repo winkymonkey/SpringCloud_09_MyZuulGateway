@@ -1,19 +1,18 @@
-package com.example.demo;
+package org.example.demo;
 
+import org.example.demo.filters.ErrorFilter;
+import org.example.demo.filters.PostFilter;
+import org.example.demo.filters.PreFilter;
+import org.example.demo.filters.RouteFilter;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.zuul.EnableZuulProxy;
 import org.springframework.context.annotation.Bean;
 
-import com.example.demo.filters.ErrorFilter;
-import com.example.demo.filters.PostFilter;
-import com.example.demo.filters.PreFilter;
-import com.example.demo.filters.RouteFilter;
 
 @SpringBootApplication
 @EnableZuulProxy
 public class MyZuulGatewayApplication {
-
 	public static void main(String[] args) {
 		SpringApplication.run(MyZuulGatewayApplication.class, args);
 	}

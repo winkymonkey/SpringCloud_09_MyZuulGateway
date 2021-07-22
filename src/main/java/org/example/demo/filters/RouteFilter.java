@@ -1,12 +1,12 @@
-package com.example.demo.filters;
+package org.example.demo.filters;
 
 import com.netflix.zuul.ZuulFilter;
 
-public class PostFilter extends ZuulFilter {
+public class RouteFilter extends ZuulFilter {
 
 	@Override
 	public String filterType() {
-		return "post";
+		return "route";
 	}
 
 	@Override
@@ -21,7 +21,7 @@ public class PostFilter extends ZuulFilter {
 
 	@Override
 	public Object run() {
-		System.out.println("Inside Response Filter");
+		System.out.println("Inside Route Filter");
 		return null;
 	}
 }
